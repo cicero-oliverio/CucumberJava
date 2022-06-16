@@ -24,10 +24,10 @@ public class LoginDemoSteps {
         navigator.navigate().to("https://example.testproject.io/web");
     }
 
-    @When("user enters username and password")
-    public void userEntersUsernameAndPassword() {
-        navigator.findElement(By.id("name")).sendKeys("Raghav");
-        navigator.findElement(By.id("password")).sendKeys("12345");
+    @When("^user enters (.*) and (.*)$")
+    public void userEntersUsernameAndPassword(String username,String password) {
+        navigator.findElement(By.id("name")).sendKeys(username);
+        navigator.findElement(By.id("password")).sendKeys(password);
     }
 
     @And("user clicks on login")
