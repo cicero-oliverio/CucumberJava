@@ -13,7 +13,7 @@ import utils.CreateChrome;
 public class GoogleSearchSteps {
 
     CreateChrome createChrome = new CreateChrome();
-    private final WebDriver navigator = createChrome.createChrome();
+    public WebDriver navigator = createChrome.createChrome();
     public String baseUrl = "https://www.google.com";
 
 
