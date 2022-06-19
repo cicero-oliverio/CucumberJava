@@ -8,12 +8,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import utils.CreateChrome;
+import utils.Chrome;
 
 public class GoogleSearchSteps {
 
-    CreateChrome createChrome = new CreateChrome();
-    public WebDriver navigator = createChrome.createChrome();
+    Chrome chrome = new Chrome();
+    public WebDriver navigator = chrome.createChrome();
     public String baseUrl = "https://www.google.com";
 
 

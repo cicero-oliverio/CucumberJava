@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class CreateChrome {
+public class Chrome {
 
     public WebDriver createChrome() {
 
@@ -28,6 +28,15 @@ public class CreateChrome {
         return navigator;
 
     }
+
+    public void closeChrome(WebDriver navigator){
+        navigator.close();
+    }
+
+    public void quitChrome(WebDriver navigator){
+        navigator.quit();
+    }
+
 
 }
 
