@@ -2,10 +2,13 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.Chrome;
 
 public class loginPage {
 
     protected WebDriver navigator;
+
+    Chrome chrome = new Chrome();
 
     private By txt_username = By.id("name");
     private By txt_password = By.id("password");
@@ -18,8 +21,8 @@ public class loginPage {
         this.navigator = navigator;
 
         if (!navigator.getTitle().equals("TestProject Demo")) {
-            navigator.close();
-            navigator.quit();
+            chrome.closeChrome(navigator);
+            chrome.quitChrome(navigator);
             throw new IllegalStateException("This is not LoginPage,the current page is " + navigator.getCurrentUrl());
         }
     }
