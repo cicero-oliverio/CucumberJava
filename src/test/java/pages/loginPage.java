@@ -6,9 +6,9 @@ import utils.Chrome;
 
 public class loginPage {
 
-    protected WebDriver navigator;
+    WebDriver navigator;
 
-    Chrome chrome = new Chrome();
+    protected Chrome chrome = new Chrome();
 
     private By txt_username = By.id("name");
     private By txt_password = By.id("password");
